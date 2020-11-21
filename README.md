@@ -27,7 +27,7 @@ Press `Ctrl + C` after the application crushed. Note down the byte number. (Exam
 At this point, I'm assuming you have Mona setup. 
 
 ```c++
-> !mona findmsp -distance 1400
+> !mona findmsp -distance 2000
 ```
 
 Find EIP normal pattern. (Example: EIP contains normal pattern : 0x42987857 (offset 1876))
