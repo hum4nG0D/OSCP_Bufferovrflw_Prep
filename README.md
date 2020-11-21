@@ -5,7 +5,7 @@ For OSCP Buffer Overflow preparation, you don't need complicated codes and/or ad
 Free TryHackMe Room: https://tryhackme.com/room/bufferoverflowprep
 
 ```c++
-xfreerdp /u:admin /p:password /cert:ignore /v:192.168.10.10
+> xfreerdp /u:admin /p:password /cert:ignore /v:192.168.10.10
 ```
 
 ### 01 Fuzzing
